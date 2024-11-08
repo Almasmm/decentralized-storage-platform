@@ -64,3 +64,28 @@ To create a decentralized platform where users can rent out unused storage space
 1. **Step 1**: Deploy smart contracts on a local blockchain using Ganache-CLI.
 2. **Step 2**: Run the server locally (e.g., `live-server public`).
 
+## Project Structure
+```
+├── artifacts
+├── cache
+├── contracts
+│   ├── StorageContract.sol
+│   ├── StorageToken.sol
+├── node_modules
+├── public
+│   ├── StorageContract.json
+│   ├── StorageToken.json
+│   ├── app.js
+│   ├── index.html
+│   ├── style.css
+├── scripts
+│   └── deploy.js
+├── test
+│   └── StorageContract.test.js
+├── .env
+├── .gitignore
+├── hardhat.config.js
+├── package-lock.json
+├── package.json
+└── README.md
+```
