@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Decentralized Storage Platform</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
+  </head>
+  <body>
+    <h1>Decentralized Storage Sharing Platform</h1>
+
+    <!-- Connect Wallet Button -->
+    <button onclick="connectWallet()">Connect Wallet</button>
+    <p id="wallet-address"></p>
+
+    <!-- Provider Section -->
+    <div id="provider-section" style="display: none">
+			<h2>Provider Dashboard</h2>
+			<button onclick="listStorage()">Create Storage Listing</button>
+			<h3>Your Listings</h3>
+			<div id="provider-listings"></div>
+			
+			<h3>Pending Requests</h3>
+			<div id="pending-requests"></div> <!-- New section for pending requests -->
+		</div>
+		
+
+    <!-- Consumer Section -->
+    <div id="consumer-section" style="display: none">
+      <h2>Available Storage Listings</h2>
+      <div id="available-listings"></div>
+
+      <h2>Your Rentals</h2>
+      <div id="consumer-rentals"></div>
+    </div>
+
+    <!-- Upload File Modal for Consumers -->
+    <div id="upload-modal" style="display: none">
+      <h3>Upload File to Storage Provider</h3>
+      <input type="file" id="file-input" />
+      <button onclick="handleFileUpload()">Upload</button>
+      <button onclick="closeModal()">Close</button>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
