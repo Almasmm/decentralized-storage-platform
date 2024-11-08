@@ -1,67 +1,66 @@
-# 📦 StorageSharingPlatform - Decentralized Storage Sharing dApp
+# Decentralized Storage Sharing Platform
 
-## Overview  
-The **StorageSharingPlatform** is a decentralized platform built on Ethereum, allowing users to rent out unused storage space or purchase storage from others. It leverages smart contracts for secure rental agreements and payments, with transactions conducted using a custom ERC20 token called **StorageToken**.  
+## Objective
+To create a decentralized platform where users can rent out unused storage space on their devices, and others can use it to store their files securely and affordably.
 
-The platform ensures data security through **file encryption**, **fragmentation**, and **redundancy** to prevent data loss.
+## Motivation
+- Reduce costs associated with centralized cloud storage services.
+- Promote resource sharing by utilizing underutilized storage space.
+- Provide a decentralized, secure, and censorship-resistant storage option.
 
----
+## Core Features
+1. **Peer-to-Peer Storage Marketplace**: Users can rent out their unused storage space on their devices or purchase storage from others on a decentralized network.
+2. **Smart Contracts for Data Storage and Payments**: Manages agreements between storage providers and consumers, ensuring transparent and fair payments based on storage usage.
+3. **File Encryption**: Files sent by consumers are encrypted to ensure data security.
 
-## Features
-- **Peer-to-Peer Storage Marketplace**: Rent or buy storage space from other users.
-- **Smart Contracts**: Automated agreements with transparent payment flows.
-- **StorageToken**: Custom ERC20 token used for transactions.
-- **File Encryption & Fragmentation**: Protects files by encrypting and splitting them.
-- **Redundancy**: Creates backups to prevent data loss.
+## Detailed Architecture
+### 1. User Application
+- **Storage Providers**: Register available space for rent.
+- **Storage Consumers**: Purchase available space for rent, upload files, and send them to the storage provider's machine.
+- **Dashboard**: Track storage usage, payments, and performance.
 
----
+### 2. Blockchain Layer
+- **Smart Contracts**: Automate storage rental agreements, payments, and data retrieval.
 
-## Project Structure
-StorageSharingPlatform/ 
+### 3. Token System
+- **Storage Tokens (ERC-20)**: Used for payments between storage providers and consumers.
 
-│ ├── contracts/ 
+## User Flows
+### Storage Provider User Flow
+1. **Sign-Up/Sign-In**: Register or log in with email or wallet.
+2. **Profile Setup**: Set up profile details like available storage and pricing.
+3. **Storage Listing Creation**: Create and publish storage listings.
+4. **Waiting for Requests**: Wait for consumer requests to rent storage.
+5. **Accepting Requests**: Review and accept storage contract requests.
+6. **Storage Monitoring**: Track storage usage, uptime, and payments.
+7. **Payment and Contract Conclusion**: Receive payment at contract end or renewal.
 
-│ ├── StorageMarket.sol
+### Storage Consumer User Flow
+1. **Sign-Up/Sign-In**: Register or log in with email or wallet.
+2. **Storage Search**: Search for storage based on size, price, and security.
+3. **View Provider Profile**: View provider listings and storage details.
+4. **Contract Agreement**: Initiate a smart contract for the selected storage.
+5. **File Upload and Encryption**: Upload files, which are encrypted before sending.
+6. **Monitoring Storage Usage**: Track storage usage, encryption status, and contract status.
+7. **Payment and Contract Renewal**: Make payments or renew/terminate the contract.
 
-│ └── StorageToken.sol
+### File Transfer Process
+- When storage is purchased by a consumer, the consumer sends the encrypted file to the provider, who then saves it locally.
+- File transfer can be implemented using sockets from one machine to another, ensuring the process is simple and secure.
 
-├── app.js
+## Platform Overview
+- **User Types**: Users can log in as either a consumer or provider using a MetaMask wallet.
+- **Main Page (Consumer)**: Displays available storage rentals and lists purchased storages. Purchased storage includes options to upload and send files to the storage provider.
+- **Main Page (Provider)**: Allows creating new storage listings for rent and displays sold rental information. Includes requests from consumers that need approval. Providers can download files sent by consumers, with active buttons for available downloads.
 
-├── index.html
+## Tech Stack
+- **Frontend**: HTML, CSS, JavaScript (developed in VS Code)
+- **Blockchain**: Solidity (for smart contracts), Ganache-CLI (for local blockchain)
+- **Wallet Integration**: MetaMask
+- **Smart Contract Development**: HardHat (testing and deployment), OpenZeppelin modules (for ERC-20 storage tokens)
+- **Backend**: Node.js with Express (no databases)
 
-├── style.css
+## Running the Platform
+1. **Step 1**: Deploy smart contracts on a local blockchain using Ganache-CLI.
+2. **Step 2**: Run the server locally (e.g., `live-server public`).
 
-├── README.md
-
-├── LICENSE
-
-## Usage Instructions
-
-### Prerequisites  
-1. **MetaMask** browser extension installed.  
-2. **Ganache** to create a local Ethereum blockchain.  
-3. **Remix IDE** to deploy smart contracts.  
-4. **Node.js** and **npm** installed for any required dependencies.
-
-### Smart Contracts
-StorageToken.sol: Implements the ERC20 token used for payments.
-StorageMarket.sol: Manages listings, rental agreements, and payments.
-
-### Technology Stack
-**Frontend**: HTML, CSS, JavaScript (Web3.js)
-**Smart Contracts**: Solidity (deployed via Remix IDE)
-**Blockchain**: Local Ethereum blockchain using Ganache
-**Wallet Integration**: MetaMask
-
-# Sample Hardhat Project
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
-
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.js
-```
