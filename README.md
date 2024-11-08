@@ -93,11 +93,14 @@ To create a decentralized platform where users can rent out unused storage space
    ```markdown
 
    ## Screenshots
-   ![Main Page](screenshots/main_page.png)
-   *Figure 1: Main page showing available storage listings.*
+   ![Wallet connection](screenshots/Screenshot 2024-11-08 164825.png)
+   *Figure 1: Wallet connection page.*
 
-   ![Provider Dashboard](screenshots/provider_dashboard.png)
+   ![Provider Dashboard](screenshots/Screenshot 2024-11-08 165141.png)
    *Figure 2: Provider dashboard with storage listings.*
+
+   ![Consumer Dashboard](screenshots/Screenshot 2024-11-08 164913.png)
+   *Figure 2: Consumer dashboard with storage listings.*
 
    ```
 
