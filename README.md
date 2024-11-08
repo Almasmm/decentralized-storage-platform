@@ -89,7 +89,7 @@ To create a decentralized platform where users can rent out unused storage space
 ├── package.json
 └── README.md
 ```
-## Adding Screenshots
+## Some screens from the project
    ```markdown
 
    ## Screenshots
