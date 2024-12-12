@@ -89,19 +89,3 @@ To create a decentralized platform where users can rent out unused storage space
 ├── package.json
 └── README.md
 ```
-## Some screens from the project
-   ```markdown
-
-   ## Screenshots
-   ![Wallet connection](screenshots/Screenshot 2024-11-08 164825.png)
-   *Figure 1: Wallet connection page.*
-
-   ![Provider Dashboard](screenshots/Screenshot 2024-11-08 165141.png)
-   *Figure 2: Provider dashboard with storage listings.*
-
-   ![Consumer Dashboard](screenshots/Screenshot 2024-11-08 164913.png)
-   *Figure 2: Consumer dashboard with storage listings.*
-
-   ```
-
-This will help visually illustrate the platform's features
